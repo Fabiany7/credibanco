@@ -17,21 +17,12 @@ import java.util.List;
 @RestController
 public class CredibancoApplication {
 
-	@Autowired
-	private JdbcTemplate jdbcTemplate;
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(CredibancoApplication.class, args);
 	}
 
-	@GetMapping("/hello")
-	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-	String sql = "SELECT * FROM autor";
-		List<AutorDto> students = jdbcTemplate.query(sql,
-				BeanPropertyRowMapper.newInstance(AutorDto.class));
-		students.forEach(System.out :: println);
-		System.out.println("hola");
-		return String.format("Hello %s!", students.get(0).nombre);
-	}
+
 
 }

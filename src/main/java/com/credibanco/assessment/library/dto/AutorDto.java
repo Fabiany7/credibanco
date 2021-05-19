@@ -1,5 +1,7 @@
 package com.credibanco.assessment.library.dto;
 
+
+@Entity
 public class AutorDto {
 
     public int id_autor;
