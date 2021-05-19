@@ -1,13 +1,26 @@
 package com.credibanco.assessment.library.dto;
 
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 @Entity
 public class AutorDto {
 
+    @Id
     public int id_autor;
+
+    @Column (name = "nombre",length = 50)
     public String nombre;
+
+    @Column (name = "fecha",length = 50)
     public String fecha;
+
+    @Column (name = "ciudad",length = 50)
     public String ciudad;
+
+    @Column (name = "correo",length = 50)
     public String correo;
 
     public int getId_autor() {
